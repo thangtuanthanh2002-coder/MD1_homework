@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Repairing Tracking</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        .card {
+            width: 1000px;
+            height: 1000px;
+            margin: 20px auto;
+            position: relative;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.45),
+                    rgba(0, 0, 0, 0.75)
+                ),
+                url("02.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            border-radius: 25px;
+            overflow: hidden;
+        }
+        .category {
+            position: absolute;
+            top: 65px;
+            left: 65px;
+
+            padding: 14px 20px;
+            background-color: #d52b32;
+            color: white;
+
+            font-size: 24px;
+            border-radius: 12px;
+        }
+        .process {
+            position: absolute;
+            right: 55px;
+            top: 180px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .icon {
+            width: 110px;
+            height: 110px;
+
+            background-color: #d71920;
+            border-radius: 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 65px;
+            color: white;
+        }
+        .line {
+            width: 3px;
+            height: 50px;
+            background-color: white;
+        }
+        .step {
+            width: 110px;
+            height: 110px;
+
+            border: 3px solid white;
+            border-radius: 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            font-size: 55px;
+        }
+        .content {
+            position: absolute;
+            left: 65px;
+            bottom: 65px;
+
+            color: white;
+        }
+
+        .content h1 {
+            margin: 0 0 25px;
+
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .content p {
+            margin: 0;
+
+            font-size: 28px;
+            color: #bdbdbd;
+        }
+
+        .category:hover {
+            background-color: #ff4444;
+            transform: scale(1.05);
+        }
+
+        .step:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .icon:hover {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="category">
+            AUTOMOTIVE
+        </div>
+        <div class="process">
+
+            <div class="icon">⚙</div>
+
+            <div class="line"></div>
+
+            <div class="step">A</div>
+
+            <div class="line"></div>
+
+            <div class="step">B</div>
+
+        </div>
+        <div class="content">
+            <h1>Car Repairing Tracking</h1>
+            <p>All Platform</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
