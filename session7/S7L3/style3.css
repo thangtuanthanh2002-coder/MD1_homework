@@ -1,0 +1,23 @@
+.container {
+    width: 470px;
+    height: 80px;
+    border: 1px solid black;
+    padding: 6px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.item {
+    background-color: #3498db;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item5 {
+    grid-column: span 2;
+}
