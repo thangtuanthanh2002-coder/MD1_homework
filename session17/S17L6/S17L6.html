@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính đơn giản</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .calculator {
+            width: 520px;
+            max-width: 95%;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px #ccc;
+        }
+        #display {
+            width: 100%;
+            height: 75px;
+            margin-bottom: 20px;
+            padding: 10px;
+            text-align: right;
+            font-size: 30px;
+            border: 2px solid #ccc;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 60px);
+            gap: 15px;
+        }
+
+        button {
+            font-size: 22px;
+            border: 1px solid #ddd;
+            background-color: #f8f8f8;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .operator {
+            background-color: #ddd;
+        }
+        .equal {
+            grid-column: 4;
+            grid-row: 2 / span 4;
+            background-color: #4d88f5;
+            color: white;
+            border: none;
+        }
+        .equal:hover {
+            background-color: #3475e8;
+        }
+        @media (max-width: 400px) {
+            .calculator {
+                padding: 12px;
+            }
+
+            .buttons {
+                gap: 8px;
+                grid-template-rows: repeat(5, 55px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+
+        <div class="buttons">
+            <button class="operator" data-operator="+">+</button>
+            <button class="operator" data-operator="-">-</button>
+            <button class="operator" data-operator="*">×</button>
+            <button class="operator" data-operator="/">÷</button>
+
+            <button data-number="7">7</button>
+            <button data-number="8">8</button>
+            <button data-number="9">9</button>
+            <button class="equal" id="equal">=</button>
+
+            <button data-number="4">4</button>
+            <button data-number="5">5</button>
+            <button data-number="6">6</button>
+
+            <button data-number="1">1</button>
+            <button data-number="2">2</button>
+            <button data-number="3">3</button>
+
+            <button data-number="0">0</button>
+            <button id="decimal">.</button>
+            <button id="clear">C</button>
+        </div>
+    </div>
+    <script src="S17L6.js"></script>
+</body>
+</html>
